@@ -1,0 +1,217 @@
+html, body{
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mukta', sans-serif;
+}
+.wrapper{
+    display: grid;
+    margin: 0 auto;
+    grid-template-areas: 
+    "products reviews reviews"
+    "quote quote quote";
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding:0 5% 5% 5%;
+}
+
+.products{
+    grid-area: products;
+    display: flex;
+    flex-direction: column;
+    padding:1% 3%;
+    margin: 2%;
+    font-family: 'Mukta', sans-serif;
+    word-wrap: break-word;
+}
+
+.slogan{
+    width:80%;
+    line-height: 125%;
+    margin-top:3%;
+    color:#A8AFB3;
+    word-break: break-word;
+}
+
+.headline{
+    font-weight: bold;
+    font-size: 3em;
+    color:#4B034E;
+    width:75%;
+    line-height: 80%;
+}
+
+.reviews{
+    grid-area: reviews;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:1% 3%;
+    margin: 2%;
+}
+
+.review-box{
+    position: relative;
+    display: flex;
+    width:75%;
+    padding:2% 2%;
+    margin:0 0 2% 0;
+    border-radius: 2px;
+    background-color:#F6F1F9;
+    color:#4B034E;
+    font-weight: bold;
+}
+
+.top{
+    left:0%;
+}
+
+.middle{
+    left:4%;
+}
+
+.bottom{
+    left:10%;
+}
+
+.review-box-text{
+    margin: 0 0 0 2%;
+}
+
+.testimonials{
+    grid-area: quote;
+    display: flex;
+}
+
+.cardT{
+    display: grid;
+    position: relative;
+    grid-template-areas: 
+        "image name"
+        "review review";
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 35% 65%;
+    background-color:#4B034E;
+    margin:2%;
+    padding:1% 3%;
+    border-radius: 2%;
+    height:90%;
+    color:#ffff;
+}
+
+.cardT .image{
+    grid-area: image;
+    margin: auto;
+}
+
+.image img{
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:75%;
+    width:75%;
+}
+
+.cardT .name{
+    grid-area: name;
+    margin: auto 2%;
+}
+
+.name .verification{
+    margin:0;
+    color:#C04ABC;
+}
+
+.cardT .quote{
+    grid-area: review;
+    font-size: .9em;
+    font-weight: 300px;
+}
+
+@media only screen and (max-width:875px){
+    .wrapper{
+        margin:auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .products{
+        grid-area: products;
+        display: flex;
+        flex-direction: column;
+        padding:1% 3%;
+        margin: 5% 2% 2% 2%;
+        font-family: 'Mukta', sans-serif;
+        word-wrap: break-word;
+    }
+
+    .headline{
+        font-weight: bold;
+        font-size: 3em;
+        color:#5E0462;
+        width:100%;
+        line-height: 80%;
+    }
+
+    .slogan{
+        width:100%;
+        line-height: 125%;
+        margin-top:5%;
+        color:#A8AFB3;
+        word-break: break-word;
+    }
+
+    .testimonials{
+        flex-direction: column;
+    }
+
+    .review-box{
+        width:100%;
+        flex-direction: column;
+    }
+
+    .cardT{
+        display: grid;
+        position: relative;
+        grid-template-areas: 
+            "image name"
+            "review review";
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 35% 65%;
+        grid-row-gap: 1em;
+        background-color:#5E0462;
+        margin:2%;
+        padding:5% 3%;
+        border-radius: 2%;
+        height:90%;
+        color:#ffff;
+    }
+
+    /* .review-box{
+        position: relative;
+        width:100%;
+        padding:1% 3%;
+        margin:0 0 2% 0;
+        border-radius: 2px;
+        background-color:#E2CFEA;
+        color:#5E0462;
+        font-weight: bold;
+    } */
+
+    .top{
+        left:0%;
+    }
+
+    .middle{
+        left:0%;
+    }
+
+    .bottom{
+        left:0%;
+    }
+}
